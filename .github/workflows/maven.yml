@@ -24,5 +24,8 @@ jobs:
         java-version: 11
     - name: Build with Maven
       run: mvn -B package --file pom.xml
+      working-directory: ${{env.working-directory}}
     - name: Run Tests
       run: mvn clean compile test
+      working-directory: ${{env.working-directory}}
+
